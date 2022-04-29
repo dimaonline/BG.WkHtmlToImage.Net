@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>BG.WkHtmlToImage.Net</Title>
+        <Description>.NET wrapper for wkhtmltoimage (html to image converter), working on Linux, macOS, Windows and Docker.</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/dimaonline/BG.WkHtmlToImage.Net</RepositoryUrl>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
+        <RepositoryType>git</RepositoryType>
+        <Authors>DA</Authors>
+        <PackageVersion>1.0.6</PackageVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="executables" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="executables\mac\wkhtmltoimage" />
+      <EmbeddedResource Include="executables\mac\wkhtmltoimage" />
+      <None Remove="executables\windows\wkhtmltoimage.exe" />
+      <EmbeddedResource Include="executables\windows\wkhtmltoimage.exe" />
+      <None Remove="executables\linux\wkhtmltox_0.12.6-1.buster_amd64.deb" />
+      <EmbeddedResource Include="executables\linux\wkhtmltox_0.12.6-1.buster_amd64.deb" />
+      <None Remove="executables\linux\info.txt" />
+      <EmbeddedResource Include="executables\linux\info.txt" />
+    </ItemGroup>
+
+</Project>
